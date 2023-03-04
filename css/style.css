@@ -1,0 +1,1081 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+.page-wrapper {
+    overflow: hidden;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.closebtn {
+    display: none;
+}
+
+#closebtn {
+    display: none;
+}
+
+header .containers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    max-width: 100%;
+    width: 100%;
+    background-color: white;
+    z-index: 99;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    padding: 2% 7% 2%;
+}
+
+.containers nav {
+    text-align: center;
+    flex: 1;
+}
+
+.containers nav ul li {
+    display: inline-block;
+    padding: 0 5% 0;
+}
+
+.containers nav ul li a {
+    font-family: 'Rubik', sans-serif;
+    color: black;
+    font-weight: 400;
+    font-size: 1.3rem;
+    position: relative;
+    text-decoration: none;
+}
+
+.containers nav ul li a.active {
+    color: orange;
+    font-weight: bold;
+}
+
+.containers nav ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: orange;
+    transition: width 0.5s;
+}
+
+.containers nav ul li a:hover::before {
+    width: 100%;
+}
+
+.logo {
+    margin-left: -3%;
+}
+
+.logo h1 span img {
+    width: 30px;
+}
+
+.logo h1 .photo-g {
+    background: -webkit-linear-gradient(orangered, royalblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.3rem;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+}
+
+
+.account p {
+    font-size: 1.3rem;
+}
+
+/* HERO SECTION */
+
+.hero-section {
+    padding: 200px 0 0;
+}
+
+.hero-img img {
+    transform: rotateY(180deg);
+    width: 100%;
+}
+
+.hero-img {
+    position: relative;
+}
+
+.hero-img .back {
+    position: absolute;
+    top: 0%;
+    /* left: 0; */
+    right: -20%;
+    bottom: 0;
+    content: '';
+    opacity: .4;
+    /* z-index: 1; */
+    width: 100%;
+    height: 100%;
+    background: palevioletred;
+    border-radius: 10px;
+    transform: rotate(10deg);
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: bolder;
+    padding-bottom: 5%;
+}
+
+.hero-text p {
+    font-size: 1.9rem;
+    padding-bottom: 5%;
+}
+
+.hero-text .btn a button {
+    background-color: black;
+    border: none;
+    padding: 20px 50px;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.hero-text .btn a button i {}
+
+/* HERO SECTION */
+
+/* UNIQUE SECTION */
+.heading h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding-bottom: 3%;
+}
+
+.heading p {
+    font-size: 1.3rem;
+    padding-bottom: 3%;
+}
+
+.unique-btn a button {
+    background: transparent;
+    border: 3px solid black;
+    padding: 20px 50px;
+    border-radius: 50px;
+    color: black;
+    font-size: 1.3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    font-weight: 400;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.layover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 18%;
+    opacity: 0;
+    transition: .3s ease;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-color: rgb(0, 0, 0);
+    /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#layover {
+    padding-top: 0%;
+}
+
+/* When you mouse over the container, fade in the overlay icon*/
+.card-image:hover .layover {
+    opacity: 1;
+}
+
+.layover .btn p {
+    background: transparent;
+    border: 3px solid black;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    font-weight: 400;
+}
+
+.layover .btn {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layover #btn p {
+    background-color: brown;
+    border: none;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    /* background-color: #fefefe; */
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Caption text */
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+img.demo {
+    /* opacity: 0.6; */
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* UNIQUE SECTION */
+
+/* PACKAGES SECTION */
+.packages-section {
+    padding: 150px 0 60px;
+}
+
+.package-img {
+    position: relative;
+}
+
+.package-img img {
+    width: 300px;
+    height: 290px;
+    /* width: 70px; */
+    border-radius: 50%;
+}
+
+.img-2 {
+    margin-left: 15%;
+}
+
+.img-3 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.package-text h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.package-text p {
+    font-size: 1.3rem;
+}
+
+.package-text .btn a button {
+    background-color: black;
+    border: none;
+    padding: 20px 50px;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+/* PACKAGES SECTION */
+
+/* FOOTER SECTION */
+footer {
+    background-color: black;
+    padding: 100px 0 60px;
+}
+
+.footer {
+    background-color: black;
+    padding: 100px 30px 0 60px;
+}
+
+.footer-container hr {
+    background-color: white;
+    margin: 5% 0 5%;
+}
+
+.footer-container h5 {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-bottom: 3%;
+}
+
+.footer-container p a {
+    text-decoration: none;
+    color: white;
+    line-height: 2;
+}
+
+.footer-script p {
+    color: white;
+}
+
+.icons a i {
+    color: white;
+    font-size: 2rem;
+}
+
+.icons a {
+    text-decoration: none;
+}
+
+.icons h6 {
+    color: white;
+}
+
+/* FOOTER SECTION */
+
+
+/* SERVICES PAGE SECTION */
+.left-sidebar {
+    background-color: white;
+    /* Black*/
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    float: left;
+    min-height: 100%;
+    position: fixed;
+    padding-top: 150px;
+    width: 10%;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.left-nav i {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    display: block;
+    transition: 0.3s;
+}
+
+.home p span,
+.user p span,
+.notification p span,
+.likes p span,
+.download p span,
+.settings p span,
+.faqs p span {
+    border-bottom: 1px solid black;
+}
+
+.home a,
+.user a,
+.notification a,
+.likes a,
+.download a,
+.settings a,
+.faqs a {
+    color: black;
+    text-decoration: none;
+}
+
+.active i,
+.active p,
+a.active {
+    color: orange;
+    font-weight: bold;
+}
+
+.left-nav ul {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.left-nav ul li a {
+    color: #fff;
+    display: block;
+    /* padding: 10px 35px; */
+    -webkit-transition: all 0.3s ease-in 0s;
+    -moz-transition: all 0.3s ease-in 0s;
+    -ms-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s;
+    transition: all 0.3s ease-in 0s;
+}
+
+.left-nav ul li a:hover,
+.left-nav ul li .current {
+    background-color: #fff;
+    color: #000;
+}
+
+#main-wrapper {
+    float: left;
+    margin-left: 10%;
+    width: 89%;
+}
+
+.main-content section {
+    margin: 0 2% 0% 2%;
+}
+
+.home-section {
+    padding: 150px 0 0;
+}
+
+.seperator ul li a.active {
+    color: orange;
+}
+
+.seperator ul li a {
+    color: black;
+    border: none;
+    font-size: 0.8875rem;
+    border-left: 1px solid gray;
+}
+
+.seperator ul li a:hover {
+    border: none;
+    background: none;
+    color: orange;
+    border-bottom: 1px solid gray;
+}
+
+#sarah-section {
+    background: none;
+    padding: 20px 0 0px;
+}
+
+#grad-section {
+    background: none;
+    padding: 0px 0 30px;
+}
+
+#individual-section {
+    background: none;
+    padding: 0px 0 30px;
+}
+
+#unique-btn a button {
+    padding: 20px 40px;
+}
+
+#unique-btn a button span {
+    font-size: 0.5875rem;
+    background-color: black;
+    padding: 3px;
+    border-radius: 50%;
+    color: white;
+}
+
+#heading h1 span {
+    color: cornflowerblue;
+}
+
+.form--hidden {
+    display: none;
+}
+
+.relative {
+    position: relative;
+    display: none;
+}
+
+.absolute {
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 25%;
+}
+
+.hide-text {
+    color: green;
+}
+
+/* SERVICES PAGE SECTION */
+
+
+/* FAQS PAGE SECTION */
+.faq-container h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+    cursor: pointer;
+    max-width: 100%;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.faq-container {
+    margin-top: 15%;
+}
+
+.faq .question h3 {
+    font-family: 'Fira Sans', sans-serif;
+    cursor: pointer;
+    max-width: 100%;
+    width: 100%;
+    line-height: 4;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: black;
+}
+
+.faq .answer p {
+    font-family: 'Fira Sans', sans-serif;
+    cursor: pointer;
+    max-width: 100%;
+    width: 100%;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 100;
+}
+
+.faq.active .answer {
+    max-height: 300px;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+}
+
+/* FAQS PAGE SECTION */
+
+/* contact section starts */
+.form-whole{
+    
+}
+.contact {
+    font-family: 'Rubik', sans-serif;
+    padding: 150px 60px 0;
+    /* text-align: left; */
+}
+.contact-form .input-control {
+    padding: 20px;
+    width: 50%;
+    border-radius: 50px;
+    border: 1px black solid;
+}
+
+.contact-form select {
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    border: 1px black solid;
+}
+
+.input-bottom h6{
+    text-align: center;
+}
+.input-bottom .shipping-heading{
+    margin-top: 10%;
+}
+.contact-form #number {
+    width: 40%;
+    border-radius: 10px;
+    border-left: none;
+    margin-inline-start: -0.5%;
+}
+
+.contact-form .input-control::placeholder {
+    color: grey;
+    font-weight: 400;
+}
+
+.contact-form .input-control:focus {
+    outline: none;
+}
+
+.contact-form .input-bottom p {
+    padding-block-start: 1.5%;
+}
+
+.contact-form .btn a button {
+    background-color: black;
+    padding: 15px 100px;
+    /* width: 100%; */
+    margin-block-start: 3%;
+    margin-block-end: 3%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    border: none;
+    color: white;
+    border-radius: 50px;
+}
+.contact-form .btn{
+    margin-top: 5%;
+}
+.type #click1:checked~.buzz {
+    display: flex;
+}
+#input-control{
+    padding: 20px 20px 200px;
+    border-radius: 10px;
+}
+/* CONTACT FORM SECTION */
+
+/* DOWNLOAD PICTURE SECTION */
+.summary-section{
+    padding: 60px 0 60px;
+}
+#seperator ul li a{
+    font-size: 1.5rem;
+}
+.payment-plan img{
+    width: 7%;
+}
+.payment-plan{
+    margin: 5%;
+}
+.payment-plan span{
+    padding-right: 3%;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.shipping-section{
+    padding: 60px 0 60px;
+}
+/* DOWNLOAD PICTURE SECTION */
+
+/* @media only screen and (max-width:1100px) {
+    .main-content section {
+        margin: 0 2% 0% 2%;
+    }
+    #main-wrapper{
+        width: ;
+    }
+    #unique-btn a button{
+        padding: 20px 10px;
+    }
+} */
+@media only screen and (max-width:1100px) {
+    .containers nav ul {
+        display: block;
+        position: fixed;
+        background-color: rgb(0, 0, 0);
+        /* Black fallback color */
+        background-color: rgba(0, 0, 0, 0.9);
+        height: 0%;
+        width: 100%;
+        top: -100%;
+        left: 0%;
+        margin-left: 0;
+        z-index: 1;
+        /* overflow-y: auto; */
+        padding-bottom: 100px;
+        transition: 0.5s;
+        /* transition: all 0.3s ease; */
+    }
+
+    .containers nav #show-burger:checked~ul {
+        top: 0%;
+        height: 100%;
+    }
+
+    .containers nav ul li {
+        position: relative;
+        top: 25%;
+        /* 25% from the top */
+        width: 100%;
+        /* 100% width */
+        text-align: center;
+        /* Centered text/links */
+        margin-top: 30px;
+        /* 30px top margin to avoid conflict with the close button on smaller screens */
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        display: block;
+        /* Display block instead of inline */
+        transition: 0.3s;
+        /* Transition effects on hover (color) */
+    }
+
+    .containers nav ul li a {
+        color: white;
+    }
+
+    #closebtn {
+        display: flex;
+    }
+
+    .containers nav .style-close {
+        position: absolute;
+        top: 25px;
+        right: 55px;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .account {
+        margin-right: 2%;
+    }
+
+    .layover .btn p {
+        padding: 5px 10px;
+        font-size: 1rem;
+    }
+
+    .layover {
+        padding-top: 10%;
+    }
+
+    .hero-img {
+        margin-top: 10%;
+    }
+
+    .hero-img .back {
+        position: absolute;
+        right: 0%;
+        transform: rotate(0deg);
+    }
+
+    .hero-img img {
+        padding-top: 3%;
+    }
+
+    .unique-btn a button {
+        padding: 20px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .main-content {
+        /* background-color: red; */
+    }
+
+    .dark-logo img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:912px) {
+    #unique-btn a button {
+        padding: 20px 10px;
+    }
+}
+
+@media only screen and (min-width:800px) and (max-width:820px) {
+    .left-sidebar {
+        width: 13%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .hero-section {
+        padding: 150px 0 0;
+    }
+
+    .packages-section {
+        padding: 100px 0 60px;
+    }
+
+    .account {
+        padding-top: 3%;
+    }
+
+    .package-img img {
+        width: 200px;
+        height: 190px;
+        /* width: 70px; */
+        border-radius: 50%;
+    }
+
+    .main-content {
+        /* background-color: brown; */
+    }
+
+    .left-nav a p {
+        font-size: 0.8875rem;
+    }
+
+    .left-sidebar {
+        width: 13%;
+    }
+
+    .main-content section {
+        margin: 0 0% 0% 7%;
+    }
+
+    #unique-btn a button {
+        padding: 20px 5px;
+        font-size: 0.8875rem;
+    }
+}
+
+@media only screen and (max-width:586px) {
+    .left-sidebar {
+        width: 18%;
+    }
+}
+
+@media only screen and (max-width:540px) {
+    .unique-btn {
+        margin-bottom: 50px;
+    }
+
+    .seperator {
+        margin: 0 5% 0% 10%;
+    }
+}
+
+@media only screen and (min-width:540px) and (max-width:586px) {
+    .main-content section {
+        margin: 0 0% 0% 10%;
+    }
+
+    .seperator {
+        margin: 0 5% 0% 10%;
+    }
+
+    #btn {
+        margin-top: -23%;
+    }
+}
+
+@media only screen and (max-width:414px) {
+    .logo a img {
+        width: 80%;
+    }
+
+    .account {
+        padding-top: 5%;
+    }
+
+    .account p {
+        font-size: 1rem;
+    }
+
+    .hero-section {
+        padding: 100px 0 0;
+    }
+
+    .packages-section {
+        padding: 100px 0 60px;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size: 1.3rem;
+        padding-bottom: 2%;
+    }
+
+    .hero-text .btn a button {
+        padding: 10px 10px;
+    }
+
+    .hero-img {
+        margin-top: 10%;
+    }
+
+    .hero-img .back {
+        position: absolute;
+        right: 0%;
+        transform: rotate(0deg);
+    }
+
+    .hero-img img {
+        padding-top: 3%;
+    }
+
+    .left-sidebar {
+        width: 25%;
+    }
+
+    .main-content section {
+        margin: 0 5% 0% 10%;
+    }
+
+    .seperator ul li a {
+        font-size: 0.3875rem;
+    }
+
+    .home-section {
+        padding: 130px 50px 0;
+    }
+
+    #unique-btn a button {
+        padding: 20px 10px;
+        /* background: yellow; */
+    }
+
+    #heading h1 {
+        font-size: 1.5rem;
+    }
+
+    #sarah-section {
+        padding: 0 0 0;
+    }
+
+    .left-nav i {
+        font-size: 1rem;
+    }
+
+    .main-content section {
+        margin: 0 2% 0% 20%;
+    }
+
+    .faq-container {
+        margin-top: 25%;
+    }
+
+    .logos img {
+        margin-left: 5%;
+        width: 150px;
+    }
+
+    .burger img {
+        width: 40px;
+    }
+
+    .faq-container h2 {
+        font-size: 2rem;
+    }
+
+    .faq .question h3 {
+        font-size: 0.9875rem;
+    }
+
+    .faq .answer p {
+        font-size: 0.8875rem;
+    }
+    .contact-form .input-control {
+        padding: 20px;
+        width: 100%;
+        border-radius: 50px;
+        border: 1px black solid;
+    }
+}
+
+@media only screen and (max-width:280px) {
+    .faq-container {
+        margin-top: 25%;
+    }
+
+    .faq-container h2 {
+        font-size: 2rem;
+    }
+
+    .faq .question h3 {
+        font-size: 0.6875rem;
+    }
+
+    .faq .answer p {
+        font-size: 0.7875rem;
+    }
+}
