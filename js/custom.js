@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const sarahSection = document.querySelector("#sarah-hidden");
-    const personSection = document.querySelector("#person-hidden");
-    const gradSection = document.querySelector("#grad-hidden");
-    const selectButton = document.querySelector("#cardImage");
+    const sarahSection = document.querySelector("#sarah-section");
+    const personSection = document.querySelector("#individual-section");
+    const gradSection = document.querySelector("#graduation-section");
 
     document.querySelector("#linkAll").addEventListener("click", e => {
         e.preventDefault();
@@ -24,23 +23,50 @@ document.addEventListener("DOMContentLoaded", () => {
         gradSection.classList.add("form--hidden");
         sarahSection.classList.add("form--hidden");
     });
+    document.querySelector("#linkGrad").addEventListener("click", e => {
+        e.preventDefault();
+        personSection.classList.add("form--hidden");
+        gradSection.classList.remove("form--hidden");
+        sarahSection.classList.add("form--hidden");
+    });
 
 });
 
 document.addEventListener("DOMContentLoaded", () => {
     const shippingDetails = document.querySelector("#shipping-section")
     const orderSummary = document.querySelector("#order-summary-section")
+    const confirmDetails = document.querySelector("#confirm-details")
+    const paymentDetails = document.querySelector("#payment-details-section")
 
     document.querySelector("#linkShipping").addEventListener("click", e => {
         e.preventDefault();
         shippingDetails.classList.remove("form--hidden")
         orderSummary.classList.add("form--hidden")
+        confirmDetails.classList.add("form--hidden")
+        paymentDetails.classList.add("form--hidden")
     });
 
     document.querySelector("#linkSummary").addEventListener("click", e => {
         e.preventDefault();
         shippingDetails.classList.add("form--hidden")
         orderSummary.classList.remove("form--hidden")
+        paymentDetails.classList.add("form--hidden")
+    });
+
+    document.querySelector("#linkConfirm").addEventListener("click", e => {
+        e.preventDefault();
+        shippingDetails.classList.add("form--hidden")
+        orderSummary.classList.add("form--hidden")
+        confirmDetails.classList.remove("form--hidden")
+        paymentDetails.classList.add("form--hidden")
+    });
+
+    document.querySelector("#linkPayment").addEventListener("click", e => {
+        e.preventDefault();
+        shippingDetails.classList.add("form--hidden")
+        orderSummary.classList.add("form--hidden")
+        confirmDetails.classList.add("form--hidden")
+        paymentDetails.classList.remove("form--hidden")
     });
 });
 

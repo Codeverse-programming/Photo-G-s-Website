@@ -22,9 +22,47 @@
 
 <body>
     <div class="page-wrapper">
+        <header>
+            <div class="containers">
+                <div class="logo">
+                    <!-- <h1>PH<span><img src="./images/logo.png" alt=""></span>TO<span class="photo-g">G</span></h1> -->
+                    <a href="./index.html">
+                        <img src="./images/Screenshot 2023-03-01 021642.png" alt="" />
+                    </a>
+                </div>
+                <nav>
+                    <input type="checkbox" name="" class="show-none" id="show-burger" />
+                    <ul>
+                        <label for="show-burger">
+                            <i class="icon-close style-close" id="closebtn"></i>
+                        </label>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                        <li><a href="./faqs.html">FAQs</a></li>
+                    </ul>
+                </nav>
+                <div class="account">
+                    <a href="">
+                        <img src="./images/faces/face1.jpg" alt="">
+                        <i class="icon-arrow_drop_down"></i>
+                    </a>
+                </div>
+                <div class="login">
+                    <a href="./login.html">
+                        <button>Login</button>
+                    </a>
+                </div>
+                <label for="show-burger">
+                    <i class="icon-bars" id="closebtn"></i>
+                </label>
+            </div>
+        </header>
+
+
         <div class="summary-section">
             <nav aria-label="Page navigation example" class="seperator" id="seperator">
-                <ul class="d-flex flex-wrap justify-content-evenly">
+                <ul class="d-flex justify-content-center">
                     <li class="page-item" id="linkSummary">
                         <a class="page-link active" href="#">Order Summary</a>
                     </li>
@@ -34,10 +72,10 @@
                     <li class="page-item" id="linkShipping">
                         <a class="page-link" href="#">Shipping Details</a>
                     </li>
-                    <li class="page-item" id="linkconfirm">
+                    <li class="page-item" id="linkConfirm">
                         <a class="page-link" href="#">Confirmation Details</a>
                     </li>
-                    <li class="page-item" id="linkpayment">
+                    <li class="page-item" id="linkPayment">
                         <a class="page-link" href="#">Payment Details</a>
                     </li>
                 </ul>
@@ -142,7 +180,7 @@
             <div class="container" id="">
                 <div class="ship-heading">
                     <h1>
-                        Let us know what you think
+                        Shipping Details
                     </h1>
                 </div>
                 <div class="contact-form">
@@ -150,11 +188,11 @@
                         <div class="input-bottom">
                             <p>Country *</p>
                             <select name="" id="">
-                                <option value="+1">🏳️</option>
-                                <option value="+234">🏳️</option>
-                                <option value="+93">🏳️</option>
-                                <option value="+54">🏳️</option>
-                                <option value="+61">🏳️</option>
+                                <option value="+1">🏳️ Nigeria</option>
+                                <option value="+234">🏳️ Ghana</option>
+                                <option value="+93">🏳️ South Africa</option>
+                                <option value="+54">🏳️ Kenya</option>
+                                <option value="+61">🏳️ Togo</option>
                             </select>
                             <!-- <input type="text" name="" id="number" placeholder="" class="input-control"> -->
                             <h6>Choose from the list below</h6>
@@ -226,20 +264,15 @@
                             <h6>Choose from the list below</h6>
                             <select name="" id="">
                                 <option value="">delivery:1-3 working days</option>
-                                <option value="">Abia</option>
-                                <option value="">Adamawa</option>
-                                <option value="">Akwa Ibom</option>
-                                <option value="">Anambra</option>
-                                <option value="">Bauchi</option>
-                                <option value="">Bayelsa</option>
-                                <option value="">Benue</option>
-                                <option value="">Borno</option>
-                                <option value="">Crossriver</option>
-                                <option value="">Delta</option>
-                                <option value="">Edo</option>
-                                <option value="">Ekiti</option>
-                                <option value="">Gombe</option>
-                                <option value="">DATA ANALYST</option>
+                                <option value="">delivery:4-7 working days</option>
+                                <option value="">delivery:3-6 working days</option>
+                                <option value="">delivery:1-3 working days</option>
+                                <option value="">delivery:3-6 working days</option>
+                                <option value="">delivery:1-3 working days</option>
+                                <option value="">delivery:4-7 working days</option>
+                                <option value="">delivery:4-7 working days</option>
+                                <option value="">delivery:3-6 working days</option>
+                                <option value="">delivery:1-3 working days</option>
                             </select>
                             <!-- <input type="text" name="" id="number" placeholder="delivery:1-3 days" class="input-control"> -->
                         </div>
@@ -248,6 +281,148 @@
                         <a href="">
                             <button>Submit</button>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="confirm-details form--hidden" id="confirm-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-11">
+                        <div class="personal-details">
+                            <h1>Personal Details:</h1>
+                            <div class="email d-flex">
+                                <h3>Email Address:</h3>
+                                <p>example@gmail.com</p>
+                            </div>
+                            <div class="email d-flex">
+                                <h3>Phone Number:</h3>
+                                <p>070 333 444 55</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 edit">
+                        <a href="">
+                            <i class="icon-edit"></i>
+                        </a>
+                    </div>
+                    <hr>
+
+                    <div class="col-lg-11">
+                        <div class="personal-details">
+                            <h1>Shipping Details:</h1>
+                            <div class="email d-flex">
+                                <h3>Address:</h3>
+                                <p>N0, 8 Matthew Close, Sobo Bus-stop, Alimosho Lagos</p>
+                            </div>
+                            <div class="email d-flex">
+                                <h3>Postal Code:</h3>
+                                <p>123456</p>
+                            </div>
+                            <div class="email d-flex">
+                                <h3>Addrss Type:</h3>
+                                <p>Home</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 edit">
+                        <a href="">
+                            <i class="icon-edit"></i>
+                        </a>
+                    </div>
+                    <hr>
+
+                    <div class="col-lg-11">
+                        <div class="personal-details">
+                            <h1>Payment Details:</h1>
+                            <div class="email d-flex">
+                                <h3>Payment Method:</h3>
+                                <p>Pay with VISA</p>
+                            </div>
+                            <div class="email d-flex">
+                                <h3>Credit Card:</h3>
+                                <p>**** **** **** **** 8890</p>
+                            </div>
+                            <div class="email d-flex">
+                                <input type="checkbox" name="" id="" class="show-burger">
+                                <p>I accept terms and conditions of PhotoG <a href="">Terms and Conditions</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 edit">
+                        <a href="">
+                            <i class="icon-edit"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="btn">
+                    <a href="">
+                        <button>Submit</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="payment-details-section form--hidden" id="payment-details-section">
+            <div class="container">
+                <div class="row">
+                    <div class="payment-details">
+                        <h1>Payment Details</h1>
+                        <p>Complete your payment by providing your payment details below</p>
+                        <div class="payment-plan">
+                            <span>
+                                <input type="radio" name="" id="" />
+                                Credit Card
+                            </span>
+                            <span>
+                                <input type="radio" name="" id="" />
+                                <img src="./images/amazon-logo-removebg-preview.png" alt="" />
+                                <img src="./images/dropbox-logo1.png" alt="" />
+                            </span>
+                            <span>
+                                <input type="radio" name="" id="" />
+                                <img src="./images/amazon-logo-removebg-preview.png" alt="" />
+                                <img src="./images/dropbox-logo1.png" alt="" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form action="">
+                            <div class="input-bottom" id="name">
+                                <p>FullName *</p>
+                                <input type="text" name="" id="" placeholder="e.g Michael Williams"
+                                    class="input-control" required />
+                            </div>
+                            <div class="input-bottom">
+                                <p>Card Number *</p>
+                                <input type="text" name="" id="" placeholder="e.g 10/26" class="input-control"
+                                    required />
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-bottom">
+                                        <p>Expiration Date (MM/YY) *</p>
+                                        <input type="text" name="" id="" placeholder="e.g 10/26" class="input-control"
+                                            required />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-bottom">
+                                        <p>CV/CVV *</p>
+                                        <input type="text" name="" id="" placeholder="e.g 10/26" class="input-control"
+                                            required />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="btn">
+                            <a href="">
+                                <button>Submit</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

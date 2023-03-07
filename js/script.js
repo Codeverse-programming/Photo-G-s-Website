@@ -11,21 +11,21 @@ function closeModal() {
 }
 
 var slideIndex = 1;
-showSlides(slideIndex);
+showSlideds(slideIndex);
 
 // Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+function plusSlidee(n) {
+  showSlideds((slideIndex += n));
 }
 
 // Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
+function currentSlidee(n) {
+  showSlideds((slideIndex = n));
 }
 
-function showSlides(n) {
+function showSlideds(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
+  var slides = document.getElementsByClassName("demiMySlides");
   var dots = document.getElementsByClassName("demo");
   var captionText = document.getElementById("caption");
   if (n > slides.length) {
@@ -59,7 +59,7 @@ var slideIndex = 1;
 showSlided(slideIndex);
 
 // Next/previous controls
-function plusSlides(n) {
+function plusSlided(n) {
   showSlided((slideIndex += n));
 }
 
@@ -104,7 +104,7 @@ var slideIndex = 1;
 showSlider(slideIndex);
 
 // Next/previous controls
-function plusSlides(n) {
+function plusSlider(n) {
   showSlider((slideIndex += n));
 }
 
@@ -116,6 +116,144 @@ function currentSlider(n) {
 function showSlider(n) {
   var i;
   var slides = document.getElementsByClassName("semiMySlide");
+  var dots = document.getElementsByClassName("semiMyDemo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  captionText.innerHTML = dots[slideIndex - 1].alt;
+}
+
+
+// Open the Modal
+function openModal1() {
+  document.getElementById("2-Modal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal1() {
+  document.getElementById("2-Modal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlide1(slideIndex);
+
+// Next/previous controls
+function plusSlide1(n) {
+  showSlide1((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide1(n) {
+  showSlide1((slideIndex = n));
+}
+
+function showSlide1(n) {
+  var i;
+  var slides = document.getElementsByClassName("1-Slide");
+  var dots = document.getElementsByClassName("semiMyDemo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  captionText.innerHTML = dots[slideIndex - 1].alt;
+}
+
+
+// Open the Modal
+function openModal2() {
+  document.getElementById("3-Modal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal2() {
+  document.getElementById("3-Modal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlide2(slideIndex);
+
+// Next/previous controls
+function plusSlide2(n) {
+  showSlide2((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide2(n) {
+  showSlide2((slideIndex = n));
+}
+
+function showSlide2(n) {
+  var i;
+  var slides = document.getElementsByClassName("2-Slide");
+  var dots = document.getElementsByClassName("semiMyDemo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  captionText.innerHTML = dots[slideIndex - 1].alt;
+}
+
+
+// Open the Modal
+function openModal3() {
+  document.getElementById("4-Modal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal3() {
+  document.getElementById("4-Modal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlide3(slideIndex);
+
+// Next/previous controls
+function plusSlide3(n) {
+  showSlide3((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide3(n) {
+  showSlide3((slideIndex = n));
+}
+
+function showSlide3(n) {
+  var i;
+  var slides = document.getElementsByClassName("3-Slide");
   var dots = document.getElementsByClassName("semiMyDemo");
   var captionText = document.getElementById("caption");
   if (n > slides.length) {
@@ -176,11 +314,12 @@ function hideNav() {
 // reveal();
 
 
-// function openNav() {
-//   document.getElementById("myNav").style.height = "100%";
-// }
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
 
-
-// function closeNav() {
-//   document.getElementById("myNav").style.height = "0%";
-// }
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
